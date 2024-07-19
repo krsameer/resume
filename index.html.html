@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header, section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        header {
+            background: #000;
+            color: #fff;
+            padding: 20px; /* Add padding for spacing */
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            overflow: hidden; /* Hide overflow text */
+            white-space: nowrap; /* Prevent wrapping */
+            animation: typing 4s steps(40, end) 1s forwards, blink-caret 0.5s step-end 1s infinite;
+            border-right: 0.15em solid orange; /* Create blinking cursor */
+        }
+        section {
+            background: #e8e8e8;
+            color: #444;
+        }
+        section h2 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .picture {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+        .scroll-section {
+            background: #f4f4f4;
+        }
+	.social-links a {
+            display: block;
+            color: #0066cc;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+        /* Keyframes for typing animation */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+        /* Blinking cursor animation */
+        @keyframes blink-caret {
+            from, to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: orange;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="content">
+        <h1 id="headerText">Welcome to My Personal Webpage</h1>
+    </div>
+</header>
+
+<section id="about-me">
+    <div class="content">
+        <h2>About Me</h2>
+        <p>It was at the age of ten that I came across something called a ‘Desktop’. And it took my mother great strength to drag me back home from my uncle’s house that evening. I had got a taste for the wonders that the setup eerily similar to a television could do. In that moment I had decided what I am going to do when I grow up. I would buy a big computer and work on it all day just like my uncle. And all these years later the dream hasn’t changed, except the ‘big computer’ part. I want a smaller computer now.
+I am majoring in Computer Applications, currently enrolled in the senior year. The love of those power hungry circuit boards and blue screens which power almost everything in the world today drives me. We as humans have made so much progress that the Gen-Z kids cannot even recognize the floppy disks which were in rage only fifteen years ago. But somewhere, this nation has faltered. Almost half of this nation, according to the reports, still practices open defecation but possess more smart devices than toilets. Yet, we do not have a single tech company amongst the Indian companies featured in Fortune 500. Where the best of the minds in the Silicon Valley hail from India, we do not have an Indian tech company that is driving innovation. We are aiding the giants in the valley to build on our shoulders. And I am determined to change that.</p>
+    </div>
+</section>
+
+<section class="scroll-section">
+    <img src="IMG_0283.jpg" alt="Image 1" class="picture">
+</section>
+
+<section id="hobbies">
+    <div class="content">
+        <h2>Change</h2>
+        <p>The innovations in technology in the last fifty years have been tremendous. And we, as a nation have lent our hand. But why as the population that constitutes a good percentage of the great minds running Billion dollar tech companies, we are short of innovation in India. 
+Indian developers create on-demand software that the world uses; can we not build the next disrupting technology? I would like to think we can. We just need a great infrastructure to build the world leader India can be. We only need sustainable ecosystems to build the India of tomorrow.</p>
+    </div>
+</section>
+
+<section class="scroll-section">
+    <img src=rsz_dsc01357.jpg" alt="Image 2" class="picture">
+</section>
+
+<section id="projects">
+    <div class="content">
+        <h2>Projects</h2>
+        <p>Write the prompt here.</p>
+    </div>
+</section>
+
+<section class="scroll-section">
+    <img src="images/image3.jpg" alt="Image 3" class="picture">
+</section>
+
+
+
+<section class="scroll-section">
+    <img src="images/image4.jpg" alt="Image 4" class="picture">
+</section>
+
+<section id="contact">
+    <div class="content">
+        <h2>Contact</h2>
+        <p> Here is how to reach me</p>
+	<div class="social-links">
+            <a href="https://twitter.com/thatsameerguy" target="_blank">Twitter</a>
+	    <a href="https://www.youtube.com/@krsameer1" target="_blank">Youtube</a>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Array of text to loop through
+    const textArray = [
+        "Welcome to My Personal Webpage",
+        "Kumar Sameer",
+        "2024"
+    ];
+
+    // Function to change header text in a loop
+    function changeText() {
+        let currentIndex = 0;
+        setInterval(function() {
+            document.getElementById('headerText').textContent = textArray[currentIndex];
+            currentIndex = (currentIndex + 1) % textArray.length;
+        }, 4000); // Change text every 4 seconds (4000 milliseconds)
+    }
+
+    // Start the text change loop
+    changeText();
+</script>
+
+</body>
+</html>
